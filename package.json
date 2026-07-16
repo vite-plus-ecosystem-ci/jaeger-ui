@@ -27,9 +27,9 @@
     "npm-run-all2": "9.0.1",
     "openapi-zod-client": "1.18.3",
     "typescript": "6.0.2",
-    "vite-plus": "0.2.2",
-    "@vitest/coverage-v8": "4.1.9",
-    "vitest": "4.1.9"
+    "vite-plus": "0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d",
+    "@vitest/coverage-v8": "4.1.10",
+    "vitest": "4.1.10"
   },
   "overrides": {
     "react": "19.2.0",
@@ -37,7 +37,9 @@
     "yaml": "2.9.0",
     "@exodus/bytes": {
       "@noble/hashes": "$@noble/hashes"
-    }
+    },
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d",
+    "vitest": "4.1.10"
   },
   "workspaces": [
     "packages/plexus",
