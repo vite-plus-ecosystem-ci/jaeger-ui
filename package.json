@@ -27,9 +27,10 @@
     "npm-run-all2": "9.0.1",
     "openapi-zod-client": "1.18.3",
     "typescript": "6.0.2",
-    "vite-plus": "0.2.4",
-    "@vitest/coverage-v8": "4.1.10",
-    "vitest": "4.1.10"
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "vitest": "catalog:"
   },
   "pnpm": {
     "overrides": {
@@ -40,7 +41,19 @@
       "@exodus/bytes>@noble/hashes": "$@noble/hashes",
       "@assistant-ui/core": "0.2.10",
       "@assistant-ui/store": "0.2.13",
-      "@assistant-ui/tap": "0.5.14"
+      "@assistant-ui/tap": "0.5.14",
+      "vite": "npm:@voidzero-dev/vite-plus-core@0.0.0-commit.9855245a469b178066c25a5d45c971c130565d89",
+      "vitest": "4.1.10"
+    },
+    "peerDependencyRules": {
+      "allowAny": [
+        "vite",
+        "vitest"
+      ],
+      "allowedVersions": {
+        "vite": "*",
+        "vitest": "*"
+      }
     }
   },
   "scripts": {
