@@ -42,7 +42,7 @@
       "@assistant-ui/core": "0.2.10",
       "@assistant-ui/store": "0.2.13",
       "@assistant-ui/tap": "0.5.14",
-      "vite": "npm:@voidzero-dev/vite-plus-core@0.0.0-commit.9855245a469b178066c25a5d45c971c130565d89",
+      "vite": "npm:@voidzero-dev/vite-plus-core@0.0.0-commit.57939439ddcb16d9f54ebf7d41432893182ee46d",
       "vitest": "4.1.10"
     },
     "peerDependencyRules": {
