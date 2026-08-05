@@ -1,0 +1,63 @@
+.npmrc
+  s_13716765872fb5::t_a8fef82e0f15b2 2-3
+package.json
+  s_13716765872fb5::t_304e183548e8c1 30-33
+packages/jaeger-ui/package.json
+  s_13716765872fb5::t_e900a467408e49 26,31-32,88-93
+packages/jaeger-ui/src/components/SearchTracePage/SearchResults/TraceTable.test.tsx
+  s_13716765872fb5::t_fb69ef4916df41 7
+packages/jaeger-ui/src/components/SearchTracePage/search-panel-store.test.ts
+  s_13716765872fb5::t_1703064a5494d0 4
+packages/jaeger-ui/src/components/SearchTracePage/store.search-results.test.ts
+  s_13716765872fb5::t_77be2021b5d44b 4
+packages/jaeger-ui/src/components/TracePage/TraceTimelineViewer/PrunedSpanRow.test.tsx
+  s_13716765872fb5::t_9c2d83fbe07b06 7
+packages/jaeger-ui/src/components/TracePage/TraceTimelineViewer/ServiceFilter/index.test.tsx
+  s_13716765872fb5::t_e5f401f7514a37 7
+packages/jaeger-ui/src/components/TracePage/TraceTimelineViewer/SpanDetail/GenAITab/index.test.tsx
+  s_13716765872fb5::t_005d5c14d17de6 6
+packages/jaeger-ui/src/components/TracePage/TraceTimelineViewer/SpanDetail/GenAITab/message-format-store.test.ts
+  s_13716765872fb5::t_2d3ae5ad90294b 4
+packages/jaeger-ui/src/components/TracePage/TraceTimelineViewer/generateRowStates.test.ts
+  s_13716765872fb5::t_7837c4fdc4caf0 4
+packages/jaeger-ui/src/components/TracePage/TraceTimelineViewer/store.test.ts
+  s_13716765872fb5::t_f8641de77d83b1 4
+packages/jaeger-ui/src/components/TracePage/TraceTimelineViewer/useServiceFilter.test.ts
+  s_13716765872fb5::t_63d0c27523a5da 4
+packages/jaeger-ui/src/components/TracePage/url/svcFilter.test.ts
+  s_13716765872fb5::t_0f9bd65b5b2b3b 4
+packages/jaeger-ui/src/index.test.ts
+  s_13716765872fb5::t_a0ebb260f2325a 4
+packages/jaeger-ui/src/tracing/index.test.ts
+  s_13716765872fb5::t_a7f3a2f941528f 4
+packages/jaeger-ui/src/utils/markdownOptions.test.tsx
+  s_13716765872fb5::t_14da92d5cfdde7 6
+packages/jaeger-ui/test/vitest-setup.ts
+  s_13716765872fb5::t_823969be604083 4
+packages/jaeger-ui/vite.config.mts
+  s_13716765872fb5::t_590c80e6dc6d49 4
+packages/jaeger-ui/vitest.config.ts
+  s_13716765872fb5::t_1e8b4477f80e4e 4
+packages/plexus/package.json
+  s_13716765872fb5::t_ab73ca8b18e98e 19,24,39-40
+packages/plexus/test/vitest-setup.ts
+  s_13716765872fb5::t_8ae2c320cdd7b8 4
+packages/plexus/vitest.config.ts
+  s_13716765872fb5::t_a094ce6d9cabb5 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "01ced359d321ebabf535ff7073f0893bf5e0e468",
+  "prompts": {},
+  "sessions": {
+    "s_13716765872fb5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "98bf5daa-589a-4832-b514-26a745d7001c",
+        "model": "claude-opus-5"
+      },
+      "human_author": "MK <fengmk2@gmail.com>"
+    }
+  }
+}
