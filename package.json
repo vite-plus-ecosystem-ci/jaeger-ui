@@ -27,9 +27,10 @@
     "npm-run-all2": "9.0.1",
     "openapi-zod-client": "1.18.3",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "vite-plus": "0.2.7",
-    "@vitest/coverage-v8": "4.1.10",
-    "vitest": "4.1.10"
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "vitest": "catalog:"
   },
   "scripts": {
     "build": "pnpm -r build",
