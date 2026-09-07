@@ -27,6 +27,7 @@ overrides=$(pnpm config get overrides --json | jq -r '
   | select((.key | contains(">")) | not)
   | select((.value | type == "string") and (.value | startswith("$") | not))
   | .key
+  | capture("^(?<name>(@[^/]+/)?[^@]+)(@.*)?$").name
 ')
 
 if [ -z "$overrides" ]; then
