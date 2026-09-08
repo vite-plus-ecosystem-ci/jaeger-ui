@@ -13,9 +13,10 @@ describe('getTrackFilter', () => {
   const CATEGORY_FILTER = 'test category filter';
   let trackFilter;
 
-  // Vitest clears mock call history before each test, so the tracker has to be
-  // built inside a hook for the throttle calls it makes to stay observable.
+  // Clear previous calls before creating the tracker so its initial throttle
+  // calls remain observable in each test.
   beforeEach(() => {
+    vi.clearAllMocks();
     trackFilter = getTrackFilter(CATEGORY_FILTER);
   });
 

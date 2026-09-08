@@ -88,6 +88,7 @@ const renderWithPath = pathname => {
 
 describe('JaegerUIApp', () => {
   beforeEach(() => {
+    vi.clearAllMocks();
     mockHistory = createMockHistory();
   });
 
