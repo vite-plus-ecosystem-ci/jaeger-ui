@@ -30,6 +30,7 @@ const config: KnipConfig = {
         // dep on `vitest`; the actual test runs are in the workspace packages.
         '@vitest/coverage-v8',
         'vitest',
+        'vite',
 
         // Consumed by @vitejs/plugin-react via `babel: { babelrc: true }` in
         // vitest.config.ts. Babel processes JSX transforms at test time; not imported
