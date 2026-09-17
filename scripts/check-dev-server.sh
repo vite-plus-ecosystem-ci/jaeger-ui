@@ -21,10 +21,10 @@ echo "Starting Vite dev server on port $PORT..."
 pnpm --filter @jaegertracing/jaeger-ui start -- --port "$PORT" >"$LOG" 2>&1 &
 SERVER_PID=$!
 
-# Wait up to 30s for the "ready in" banner
+# Wait up to 30s for the HTTP endpoint to become ready.
 READY=0
 for _ in $(seq 1 30); do
-  if grep -q "ready in" "$LOG"; then
+  if curl --noproxy '*' --silent --fail "http://localhost:$PORT/" >/dev/null; then
     READY=1
     break
   fi
@@ -37,7 +37,7 @@ for _ in $(seq 1 30); do
 done
 
 if [[ $READY -eq 0 ]]; then
-  echo "❌ Dev server did not print 'ready in' within 30 seconds"
+  echo "❌ Dev server did not serve HTTP within 30 seconds"
   cat "$LOG"
   exit 1
 fi
