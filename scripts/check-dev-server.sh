@@ -11,14 +11,22 @@ PORT=15173
 LOG=$(mktemp)
 SERVER_PID=""
 
+stop_tree() {
+  local child
+  for child in $(pgrep -P "$1" || true); do
+    stop_tree "$child"
+  done
+  kill "$1" 2>/dev/null || true
+}
+
 cleanup() {
-  [[ -n "$SERVER_PID" ]] && kill "$SERVER_PID" 2>/dev/null || true
+  [[ -n "$SERVER_PID" ]] && stop_tree "$SERVER_PID"
   rm -f "$LOG"
 }
 trap cleanup EXIT INT TERM
 
 echo "Starting Vite dev server on port $PORT..."
-pnpm --filter @jaegertracing/jaeger-ui start -- --port "$PORT" >"$LOG" 2>&1 &
+pnpm --filter @jaegertracing/jaeger-ui start -- --port "$PORT" --strictPort >"$LOG" 2>&1 &
 SERVER_PID=$!
 
 # Wait up to 30s for the HTTP endpoint to become ready.
