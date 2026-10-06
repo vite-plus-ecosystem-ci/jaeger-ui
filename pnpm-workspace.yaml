@@ -9,7 +9,22 @@ allowBuilds:
 
 catalog:
   '@noble/hashes': 2.4.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158
+  vitest: 5.0.3
+  vite-plus: 0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158
+  '@vitest/coverage-v8': 5.0.3
 
+minimumReleaseAgeExclude:
+  - '@voidzero-dev/vite-plus-core@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-darwin-arm64@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-darwin-x64@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-linux-arm64-gnu@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-linux-arm64-musl@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-linux-x64-gnu@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-linux-x64-musl@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-win32-arm64-msvc@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - '@voidzero-dev/vite-plus-win32-x64-msvc@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158'
+  - vite-plus@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158
 overrides:
   react: 19.3.0
   react-dom: 19.3.0
@@ -22,3 +37,12 @@ overrides:
   brace-expansion: 5.0.9
   browserslist: 4.29.0
   fast-uri: 4.2.1
+  vite@*: 'catalog:'
+  vitest@*: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: '*'
+    vitest: '*'
