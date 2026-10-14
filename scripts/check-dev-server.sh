@@ -24,10 +24,11 @@ SERVER_PID=$!
 # Wait up to 30s for the "ready in" banner
 # Ecosystem-ci smoke test only: `vp migrate` rewrites `vite` to `vp dev`, whose
 # banner omits "ready in N ms" (vite-plus 1.1.0 behaves the same), so also
-# accept the "Local:" URL line that both banners print once the server listens.
+# accept the local URL that both banners print once the server listens (the
+# "Local:" label itself is split by color codes in CI).
 READY=0
 for _ in $(seq 1 30); do
-  if grep -qE "ready in|Local:" "$LOG"; then
+  if grep -qE "ready in|http://localhost:" "$LOG"; then
     READY=1
     break
   fi
