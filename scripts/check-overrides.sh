@@ -22,11 +22,18 @@ set -euo pipefail
 
 # Extract simple (string-valued, non-reference, non-nested) override package
 # names from pnpm's active overrides configuration, one per line.
+#
+# Ecosystem-ci smoke test only: `vp migrate` adds a `vite@*` override that
+# aliases vite to @voidzero-dev/vite-plus-core. The preview build under test is
+# versioned 0.0.0-commit.<sha>, a prerelease that the semver range `*` never
+# matches, so `pnpm why "vite@*"` finds nothing. A real release (e.g. 1.2.0)
+# matches. Strip a trailing `@*` so the presence check still runs on the name.
 overrides=$(pnpm config get overrides --json | jq -r '
   (. // {}) | to_entries[]
   | select((.key | contains(">")) | not)
   | select((.value | type == "string") and (.value | startswith("$") | not))
   | .key
+  | sub("@\\*$"; "")
 ')
 
 if [ -z "$overrides" ]; then
