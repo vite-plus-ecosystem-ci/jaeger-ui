@@ -3,7 +3,7 @@
 
 import { applyMiddleware, combineReducers, createStore, Middleware, Reducer } from 'redux';
 import { Action } from 'redux-actions';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vite-plus/test';
 
 const mockAnalytics = vi.hoisted(() => ({ enabled: true }));
 
